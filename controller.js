@@ -12,7 +12,7 @@ function showEnemyList(){
     let caughtEnemy = '';
     for(let i = 0; i < player.caughtEnemies.length; i++){
         caughtEnemy += /*HTML*/`
-        <li>${player.caughtEnemies[i].name}</li>
+        <li>${player.caughtEnemies[i].name} - Level ${player.caughtEnemies[i].level}</li>
         `
     }
     return caughtEnemy;

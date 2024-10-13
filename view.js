@@ -8,6 +8,7 @@ function updateView(){
         <div class="player">
         <div>${player.name}</div>
         <img src= "${player.image}">
+        <button onclick="showEnemies()">See your caught enemies</button>
         </div>
 
         <div class="enemies">
@@ -17,7 +18,6 @@ function updateView(){
             <div class="buttonContainer">
             <button onclick="catchEnemy()">Catch</button>
             <button onclick="updateView()">Find another one</button>
-            <button onclick="showEnemies()">See your caught enemies</button>
             </div>
         </div>
         
@@ -28,8 +28,8 @@ function updateView(){
 
 function caughtScreen(){
     document.getElementById('app').innerHTML = /*HTML*/`
-    <div>
-    <div>Congrats! You caught ${randomEnemy.name}</div>
+    <div class="textScreen">
+    <div class="textScreenPrompt">Congrats! You caught the ${randomEnemy.name}</div>
     <button onclick="updateView()">Catch more bad guys!</button>
     </div>
     `;
@@ -37,8 +37,10 @@ function caughtScreen(){
 
 function showEnemies(){
     document.getElementById('app').innerHTML = /*HTML*/`
-    <div>You've caught</div>
-    <div>${showEnemyList()}</div>
+    <div class="textScreen">
+    <div class="textScreenPrompt">You've caught:</div>
+    <div class="textScreenPrompt">${showEnemyList()}</div>
     <button onclick="updateView()">Catch more bad guys!</button>
+    </div>
     `
 }
