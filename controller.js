@@ -4,6 +4,16 @@ function getRandomEnemy(){
 };
 
 function catchEnemy(){
-    caughtEnemies.push(randomEnemy);
+    player.caughtEnemies.push(randomEnemy);
     caughtScreen();
+}
+
+function showEnemyList(){
+    let caughtEnemy = '';
+    for(let i = 0; i < player.caughtEnemies.length; i++){
+        caughtEnemy += /*HTML*/`
+        <li>${player.caughtEnemies[i].name}</li>
+        `
+    }
+    return caughtEnemy;
 }

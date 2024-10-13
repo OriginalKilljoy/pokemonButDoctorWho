@@ -18,6 +18,7 @@ let theSilence = {
     level: 9,
     image: "images/theSilence.png"
 };
+
 let weepingAngel = {
     name: "Weeping Angel",
     health: 100,
@@ -25,9 +26,12 @@ let weepingAngel = {
     image: "images/weepingAngel.png"
 };
 
-let playerName = "The Doctor";
-let playerImage = "images/doctor.png";
+let player = {
+    name: "The Doctor",
+    image: "images/doctor.png",
+    caughtEnemies: []
+};
 
 let randomEnemy = null;
 let possibleEnemies = [dalek, cyberman, theSilence, weepingAngel];
-let caughtEnemies = [];
+
